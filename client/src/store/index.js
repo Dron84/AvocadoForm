@@ -8,6 +8,7 @@ export default new Vuex.Store({
         login: false,
         maindata: null,
         user_id: null,
+        users_list: [],
     },
     mutations: {
         SET_LOGIN(state, val) {
@@ -18,6 +19,9 @@ export default new Vuex.Store({
         },
         SET_USER_ID(state,val){
             state.user_id = val
+        },
+        SET_USERS_LIST(state,val){
+            state.users_list = val
         }
     },
     actions: {
@@ -26,11 +30,15 @@ export default new Vuex.Store({
         },
         setUserId(state,val){
             state.commit('SET_USER_ID',val)
+        },
+        set_users_list(state,val){
+            state.commit('SET_USERS_LIST',val)
         }
     },
     getters: {
         login(state) {return state.login},
         maindata(state){return state.maindata},
-        user_id(state){return state.user_id}
+        user_id(state){return state.user_id},
+        users_list(state){return state.users_list}
     }
 })

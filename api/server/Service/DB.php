@@ -158,6 +158,17 @@
 			return $this->link->exec($sql);
 		}
 
+		public function getUsersList(){
+			$data = $this->selectAllFromTable($this->usersTableName);
+			$arr = [];
+			foreach ($data as $row){
+				$user['email'] = $row[1];
+				$user['id'] = $row[0];
+				$arr[]=$user;
+			}
+			return $arr;
+		}
+
 		public function getMainData(){return $this->selectAllFromTable($this->maindataTableName);}
 
 

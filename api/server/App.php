@@ -88,6 +88,12 @@
 		public function getMainData(){
 			return $this->db->getMainData();
 		}
+		public function getUsersList(){
+			return $this->db->getUsersList();
+		}
+		public function addUser($post){
+			return $this->db->addUser($post['email'],$post['pass']);
+		}
 		public function echoJSON($data){
 			header("Content-type: application/json; charset=utf-8");
 			echo json_encode($data);

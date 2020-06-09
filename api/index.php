@@ -25,6 +25,10 @@ if($method == 'POST'){
 			$data = $app->addMainData($_POST);
 			$app->echoJSON($data);
 			break;
+		case BASE_PATH . 'userslist':
+			$data = $app->addUser($_POST);
+			$app->echoJSON($data);
+			break;
 		default:
 			$app->BadRequest();
 	}
@@ -32,6 +36,10 @@ if($method == 'POST'){
 	switch ($path){
 		case BASE_PATH . "maindata":
 			$data = $app->getMainData();
+			$app->echoJSON($data);
+			break;
+		case BASE_PATH .'userslist':
+			$data = $app->getUsersList();
 			$app->echoJSON($data);
 			break;
 		default:

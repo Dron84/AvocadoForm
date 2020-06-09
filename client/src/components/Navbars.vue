@@ -17,6 +17,9 @@
                 <li class="nav-item">
                     <router-link to="/" class="nav-link" href="#">Просмотреть</router-link>
                 </li>
+                <li class="nav-item">
+                    <router-link to="/adduser" class="nav-link" href="#">Добавить пользователя</router-link>
+                </li>
             </ul>
         </div>
     </nav>

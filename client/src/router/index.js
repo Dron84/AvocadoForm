@@ -15,6 +15,12 @@ Vue.use(VueRouter)
     name: 'Add',
     component: () => import(/* webpackChunkName: "about" */ '../views/Add.vue')
   },
+  {
+      path: '/adduser',
+      name: 'Add User',
+      component: () => import(/* webpackChunkName: "about" */ '../views/addUser.vue')
+  },
+
 ]
 
 const router = new VueRouter({
